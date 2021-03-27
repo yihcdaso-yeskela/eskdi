@@ -1,3 +1,4 @@
 # eskdi
 Стилевые файлы для TeX Live, позволяющие создавать текстовые документы согласно ЕСКД и не только...
-Подробности на форуме https://electronix.ru/forum/index.php?showtopic=37007 и в файле about.pdf 
+
+Оригинальный репозиторий проекта https://github.com/yrasik/eskdi

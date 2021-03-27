@@ -1,0 +1,83 @@
+%Основной файл для сборки документа.
+%Файл не содержит данных, наполняющих документ,
+%а определяет его структуру и настройки
+
+\documentclass[a4paper,12pt,russian]{article} %draft
+\input preamble.tex %подключает используемые пакеты
+
+%Раскомментировать одну из строк, подключающих eskdi
+\usepackage[MakeStamp]{eskdi}
+%\usepackage[MakeStamp, SubSectInToc]{eskdi}
+%\usepackage[MakeStamp, SubSubSectInToc]{eskdi}
+%\usepackage[MakeStamp, ParagraphInToc]{eskdi}
+%\usepackage[twoside, MakeStamp, ParagraphInToc]{eskdi}
+%\usepackage{eskdi}
+%\usepackage[SubSectInToc]{eskdi}
+%\usepackage[SubSubSectInToc]{eskdi}
+%\usepackage[ParagraphInToc]{eskdi}
+%\usepackage[ParagraphInToc, NumIntoSections]{eskdi}
+%\usepackage[twoside, ParagraphInToc]{eskdi}
+%\usepackage[twoside, MakeEmptyStamp, ParagraphInToc]{eskdi}
+%\usepackage[twoside, MakeEmptyStamp]{eskdi}
+%\usepackage[MakeEmptyStamp, ParagraphInToc]{eskdi}
+
+
+
+%Настройка шрифтов
+%{Arial} {Courier New} 
+%{OpenGost Type A TT} {OpenGost Type B TT} % Свободный шрифт. Нет наклонного начертания и дирного начертания
+%{GOST type A} % Морально устарел, не свободный, не хватает символа тирэ. Не рекомендуется
+%{GOST type B} % Морально устарел, не свободный, не хватает символа тирэ. Не рекомендуется
+
+\gostSetRomanfont{PT Serif}%Выбор шрифта с засечками
+\gostSetSansfont{PT Sans}%Выбор шрифта без засечками
+\gostSetMonofont{PT Mono}%Выбор моноширинного шрифта
+\gostSetMainfont{PT Serif}%Выбор основного шрифта
+\gostSetStampfont{PT Sans}%Выбор шрифта основной надписи
+
+%\verbatimfont{\fontspec[Scale=1.0]{Arial} \itshape}% % Для замены стиля начертания verbatim и verb
+\verbatimfont{\fontspec[Scale=1.0]{PT Root UI}}% % Для замены стиля начертания verbatim и verb
+\newfontfamily{\gostListingfont}[Scale=1.0]{PT Root UI} % Шрифт для листингов
+
+%\renewcommand{\SetStampfontIt}{\itshape}%
+
+\input commands.tex %Файл включает такие команды как надчёркивание, запрещение переноса ТУ и др.
+
+\setpage % Разметка текста на странице
+
+\begin{document}% Начало самого документа (содержательной части)
+
+\input title.tex %Здесь информация о названии файла, авторах и т.д.
+
+\maketitle % Поместили Титульный лист
+
+\SetEmptyPage
+\SetEvenPage
+
+\makesecondpage
+
+\tableofcontents % Содержание
+
+\input ./sections/sec_example.tex
+
+\SetEmptyPage
+\input ./sections/sec_example.tex
+
+\SetEmptyPage
+\input ./sections/sec_example.tex
+\input ./sections/sec_example.tex
+
+\appendix % Приложения. Можно разместить перед списком литературы - тогда список литературы оформится как приложение
+\clearpage
+
+\input ./sections/sec_example.tex
+\clearpage
+\input ./sections/sec_example.tex
+\SetEmptyPage
+\input ./sections/sec_example.tex
+
+\SetEmptyPage
+\regChanges %Вставляем лист регистрации изменений
+\sectionmark{Лист замечаний}
+\end{document}
+

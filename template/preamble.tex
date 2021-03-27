@@ -1,0 +1,60 @@
+%Преамбула с набором настроек
+\usepackage[T2A]{fontenc}% Поддержка русских букв
+
+% XeTeX packages
+\usepackage[cm-default]{fontspec} % or install lmodern and remove cm-default opt
+\usepackage{xunicode} % some extra unicode support
+\usepackage{xltxtra} % \XeLaTeX macro
+
+\tolerance=1000
+\emergencystretch=0.74cm
+\usepackage{indentfirst} %делать отступ в начале параграфа
+
+\usepackage[pdfborder = {0 0 0}]{hyperref} %гиперссылки в документе.
+
+\usepackage[utf8]{inputenc}	% кодировка текста
+\usepackage[russian]{babel}	% руссификация по Бабелю
+\usepackage{graphics}
+
+\usepackage{svg}
+\svgsetup{clean=true,inkscapeformat=pdf}
+
+\usepackage{amsmath, amsfonts} % для расширенных настроек ссылок на формулы
+\usepackage{extsizes}	% использование шрифтов большего кегля 
+
+\usepackage{fancyvrb} % Добавляет продвинутые Verbatim и Verb
+
+\usepackage{epsfig} % удобно вставлять рисунки в строку текста
+\usepackage[usenames,dvipsnames]{pstricks}
+\usepackage{pst-grad} % For gradients
+\usepackage{pst-plot} % For axes
+
+\usepackage{graphicx,xcolor}
+
+
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{supertabular}
+\usepackage{longtable} % для создания таблиц, переносящихся на другую страницу
+%\usepackage{listingsutf8}%
+\usepackage{listings} % для включения листинга кода в приложения. Русский язык глючит.
+
+
+\lstloadlanguages{bash,[LaTeX]TeX,MetaPost,Clean,Matlab}
+
+
+\usepackage{textcomp}	% Ввод различных знаков
+\usepackage{keystroke} % для отображения символов клавиш
+\usepackage{bytefield} %для создания таблиц с битовыми полями
+\usepackage{filecontents} %для включения в документ содержимого файлов
+
+\usepackage{tikz} % Пакет для рмсования диаграмм
+\usepackage{tikz-timing}[2009/12/09]
+\usetikzlibrary{positioning,arrows,automata,plotmarks} %В данном случае нам потребуются positioning и arrows, которые нужны для расположения элементов друг относительно друга и рисования стрелок между ними соответственно.
+\usetikzlibrary{shapes,snakes}
+\usepackage{schemabloc}
+
+\usepackage{makecell} % Для многострочных ячеек таблицы
+\usepackage{colortbl} % Для раскрашивания ячеек в таблицах
+
+\usepackage{blindtext}
