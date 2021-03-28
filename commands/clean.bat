@@ -1,1 +1,1 @@
-latexmk -c
+rmdir /s /q .\auxdir\
